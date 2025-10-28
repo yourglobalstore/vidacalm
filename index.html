@@ -106,22 +106,30 @@
       transform: scale(1.05);
     }
 
-    /* Close (X) Button */
-    .close-btn {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
+/* Close (X) Button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: #fff;
+  border: none;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
 
-    .close-btn:hover {
-      color: #00c853;
-    }
+.close-btn:hover {
+  background: #e0e0e0;
+  color: #333;
+  transform: scale(1.1);
+}
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translate(-50%, 20px); }
@@ -185,4 +193,5 @@
 
 </body>
 </html>
+
 
