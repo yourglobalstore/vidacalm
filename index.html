@@ -64,6 +64,7 @@
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
+    /* COOKIE BANNER */
     .cookie-banner {
       position: fixed;
       bottom: 5%;
@@ -71,7 +72,7 @@
       transform: translateX(-50%);
       background: rgba(0,0,0,0.85);
       border-radius: 15px;
-      padding: 30px 30px 20px 30px;
+      padding: 30px;
       text-align: center;
       max-width: 480px;
       width: 90%;
@@ -87,7 +88,7 @@
       line-height: 1.4;
     }
 
-    .cookie-banner button {
+    .cookie-banner button#acceptCookies {
       background: #00c853;
       border: none;
       color: white;
@@ -101,35 +102,20 @@
       max-width: 250px;
     }
 
-    .cookie-banner button:hover {
+    .cookie-banner button#acceptCookies:hover {
       background: #00a843;
       transform: scale(1.05);
     }
 
-    /* Botão verde atrás do X — reduzido e alinhado */
-    .close-bg-btn {
-      position: absolute;
-      top: 8px;
-      right: 12px;
-      background: #fff;
-      border-radius: 15px;
-      width: 2px;  /* 1/10 do tamanho original */
-      height: 22px;
-      border: none;
-      pointer-events: none; /* não atrapalha o clique */
-      z-index: 1;
-      transition: background 0.3s;
-    }
-
-    /* Close (X) Button — atualizado */
+    /* BOTÃO DE FECHAR (X) AJUSTADO */
     .close-btn {
       position: absolute;
-      top: 8px;
+      top: 10px;
       right: 12px;
       background: #fff;
       border: none;
       color: #000;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: bold;
       border-radius: 50%;
       width: 22px;
@@ -137,13 +123,13 @@
       cursor: pointer;
       line-height: 20px;
       text-align: center;
-      z-index: 2;
-      transition: background 0.3s, color 0.3s, transform 0.2s;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     .close-btn:hover {
       background: #e0e0e0;
-      color: #333;
+      color: #000;
       transform: scale(1.1);
     }
 
@@ -164,7 +150,15 @@
         max-width: 95%;
       }
 
-      .cookie-banner button {
+      .close-btn {
+        top: 8px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 0.8rem;
+      }
+
+      .cookie-banner button#acceptCookies {
         padding: 12px 28px;
       }
     }
@@ -189,7 +183,6 @@
 
   <!-- COOKIE CONSENT -->
   <div class="cookie-banner" id="cookieBanner">
-    <button class="close-bg-btn" aria-hidden="true"></button>
     <button class="close-btn" id="closeBanner" aria-label="Close cookie consent banner">✕</button>
     <p>We use cookies to enhance your experience. Continue to learn how VidaCalm is helping people restore calmness and clarity every day.</p>
     <button id="acceptCookies">Continue</button>
@@ -210,5 +203,3 @@
 
 </body>
 </html>
-
-
