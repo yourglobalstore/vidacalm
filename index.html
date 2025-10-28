@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VidaCalm - Naturally Support Your Hearing and Peace of Mind</title>
 
   <!-- Google tag (gtag.js) -->
@@ -71,7 +71,7 @@
       transform: translateX(-50%);
       background: rgba(0,0,0,0.85);
       border-radius: 15px;
-      padding: 30px 30px 20px 30px; /* espaço extra no topo */
+      padding: 30px 30px 20px 30px;
       text-align: center;
       max-width: 480px;
       width: 90%;
@@ -106,6 +106,21 @@
       transform: scale(1.05);
     }
 
+    /* Botão verde atrás do X — reduzido e alinhado */
+    .close-bg-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: #00c853;
+      border-radius: 15px;
+      width: 22px;  /* 1/10 do tamanho original */
+      height: 22px;
+      border: none;
+      pointer-events: none; /* não atrapalha o clique */
+      z-index: 1;
+      transition: background 0.3s;
+    }
+
     /* Close (X) Button — atualizado */
     .close-btn {
       position: absolute;
@@ -122,6 +137,7 @@
       cursor: pointer;
       line-height: 20px;
       text-align: center;
+      z-index: 2;
       transition: background 0.3s, color 0.3s, transform 0.2s;
     }
 
@@ -173,7 +189,8 @@
 
   <!-- COOKIE CONSENT -->
   <div class="cookie-banner" id="cookieBanner">
-    <button class="close-btn" id="closeBanner">✕</button>
+    <button class="close-bg-btn" aria-hidden="true"></button>
+    <button class="close-btn" id="closeBanner" aria-label="Close cookie consent banner">✕</button>
     <p>We use cookies to enhance your experience. Continue to learn how VidaCalm is helping people restore calmness and clarity every day.</p>
     <button id="acceptCookies">Continue</button>
   </div>
